@@ -99,7 +99,7 @@ class _State extends State<HomePage1> {
               )
       );
     }
-      showCupertinoDialog(
+      /*showCupertinoDialog(
           context: context,
           builder: (_) =>
               CupertinoAlertDialog(
@@ -120,7 +120,7 @@ class _State extends State<HomePage1> {
                   ),
                 ],
               )
-      );
+      );*/
   }
 
 
