@@ -1,14 +1,14 @@
 class Banda{
-  String name;
   String id;
-  int voto;
+  String nAme;
+  int vote;
 
-  Banda({required this.name, required this.id, required this.voto});
+  Banda({required this.nAme, required this.id, required this.vote});
 
   factory Banda.isfromMap(Map<String, dynamic> obj) =>
       Banda(
-          name: obj["name"],
-          id: obj["id"],
-          voto: obj["voto"]
+          nAme: obj.containsKey("name") ? obj["name"] : "no hay nombre", //REGLA DE SEGURIDAD, por si los modelos son diferentes (ESTO ANULA EL PROBLEMA QUE YO SUFRI)
+          id: obj.containsKey("id") ? obj["id"] : "no hay id",
+          vote: obj.containsKey("vote") ? obj["vote"] : "no hay votos"
       );
 }
